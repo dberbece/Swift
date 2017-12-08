@@ -1,0 +1,54 @@
+//Employee.swift
+
+enum WorkType{
+    case Full
+    case Part
+    case Associate
+}
+
+class Employee{    
+    var wege : Float  = 0    
+    var workingHours : Int = 40    
+    var workingType : WorkType = WorkType.Full    
+    var experience : Int = 5    
+    var job : String = "RealJob"    
+    let company = "Telacad"    
+    var carIfAny : String?
+}
+
+//ViewController.swift
+class ViewController{
+    func viewDidAppear()
+    {
+        let employee = Employee()
+        
+        //Teste Initiale
+        print(employee)
+        print(employee.wege)
+        print(employee.job)
+        print(employee.workingType)
+        print(employee.company)
+        
+        //Modificari
+        employee.wege = 1000
+        employee.job = "Software Developer"
+        employee.workingType = .Associate
+        //employee.company = "Apple"
+        
+        //Teste Finale
+        //Teste Initiale
+        print(employee)
+        print(employee.wege)
+        print(employee.job)
+        print(employee.workingType)
+        print(employee.company)
+        
+        print(employee.experience)
+        //change to Date()
+        employee.carIfAny = "Dacia"
+        print(employee.carIfAny)
+    }
+}
+
+let c = ViewController()
+c.viewDidAppear()
